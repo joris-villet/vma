@@ -5,24 +5,62 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dist/output.css">
+  <script type="text/javascript" type="module" src="js/main.js"></script>
   <title>Tableau vma</title>
 </head>
-<body>
+<body class="bg-grey-500">
   <div class="mt-6 container m-auto">
-    <h1>VMA actuelle 14 km/h</h1>
+
+    <h1>VMA actuelle en date du 05/06/2022 14 km/h</h1>
+
+    <div id="inputs">
+      <label>
+        <input id="speed" type="text" placeholder="vitesse en km/h"/>
+      </label>
+      <label>
+        <input id="purcent" type="text" placeholder="pourcentage de la vma"/>
+      </label>
+      <p>Vitesse ciblée: <span class="target__speed"></span></p>
+      <p>Pourcentage vma: <span class="target__vma"></span></span></p>
+      <button onclick="app.calcul()">Calculer les temps de passage</button>
+    </div>
+
     <table class="mt-12 border-solid border-1 border-sky-500">
       <thead>
         <tr>
-          <td>10 km/h</td>
-          <td>11 km/h</td>
-          <td>12 km/h</td>
+          <td>Distance</td>
+          <td class="target__speed">Temps de passage</td>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="table__speed">
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>200 M</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>300 M</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>400 M</td>
+        </tr>
+        <tr>
+          <td>500 M</td>
+        </tr>
+        <tr>
+          <td>600 M</td>
+        </tr>
+        <tr>
+          <td>800 M</td>
+        </tr>
+        <tr>
+          <td>1000 M</td>
+        </tr>
+        <tr>
+          <td>1500 M</td>
+        </tr>
+        <tr>
+          <td>2000 M</td>
         </tr>
       </tbody>
     </table>
